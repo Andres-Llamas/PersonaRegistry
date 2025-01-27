@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using PersonaRegistry.DTOs.PersonaDTOs;
-using PersonaRegistry.Interfaces.PersonaInterfaces;
+using PersonaRegistry.DTOs.Persona;
+using PersonaRegistry.Interfaces.Persona;
 using PersonaRegistry.Models;
 
 namespace PersonaRegistry.Controllers
@@ -31,7 +31,7 @@ namespace PersonaRegistry.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create([FromBody]CreatePersonaDto personaToCreate)
+        public ActionResult Create([FromBody] CreatePersonaDto personaToCreate)
         {
             var createdPersona = _personaService.Create(personaToCreate);
             if (createdPersona is null) return BadRequest();
@@ -50,10 +50,10 @@ namespace PersonaRegistry.Controllers
         }
 
         [HttpPut("{id}")]
-        public ActionResult Update(Guid id, Persona updatedPersona)
+        public ActionResult Update(Guid id, [FromBody] Persona updatedPersona)
         {
             var existingPersona = _personaService.GetById(id);
-            if(existingPersona is null) return NotFound();
+            if (existingPersona is null) return NotFound();
             _personaService.Update(id, updatedPersona);
             return NoContent();
         }
@@ -62,7 +62,7 @@ namespace PersonaRegistry.Controllers
         public ActionResult Delete(Guid id)
         {
             var existingPersona = _personaService.GetById(id);
-            if(existingPersona is null) return NotFound();
+            if (existingPersona is null) return NotFound();
             _personaService.Delete(id);
             return NoContent();
         }

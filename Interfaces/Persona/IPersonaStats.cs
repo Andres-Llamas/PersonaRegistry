@@ -1,6 +1,6 @@
-namespace PersonaRegistry.Interfaces.PersonaInterfaces
+namespace PersonaRegistry.Interfaces.Persona
 {
-    public interface IPersonaStats
+    public interface IStats
     {
         public int BaseHp { get; set; }
         public int BaseStrength { get; set; }

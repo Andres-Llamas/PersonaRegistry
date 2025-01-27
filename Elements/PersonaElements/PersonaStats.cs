@@ -1,8 +1,8 @@
-using PersonaRegistry.Interfaces.PersonaInterfaces;
+using PersonaRegistry.Interfaces.Persona;
 
 namespace PersonaRegistry.Elements.Persona
 {
-    public struct PersonaStats : IPersonaStats
+    public struct PersonaStats : IStats
     {
         public int BaseHp { get; set; }
         public int BaseStrength { get; set; }

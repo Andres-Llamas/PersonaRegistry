@@ -3,7 +3,7 @@ using PersonaRegistry.Interfaces.Persona;
 
 namespace PersonaRegistry.DTOs.Persona
 {
-    public record class CreatePersonaDto : IPersona
+    public class PersonaDto : IPersona
     {
         public string? Name { get; set; }
         public PersonaArcana Arcana { get; set; }
@@ -12,5 +12,7 @@ namespace PersonaRegistry.DTOs.Persona
         public Dictionary<Affinity, AffinityEffect>? StrongAffinities { get; set; }
         public List<Affinity>? WeakAffinities { get; set; }
         public string? BackgroundLore { get; set; }
+
+        public PersonaDto() { this.Stats = new PersonaStatsDto(); }
     }
 }

@@ -1,8 +1,8 @@
-using PersonaRegistry.Interfaces.PersonaInterfaces;
+using PersonaRegistry.Interfaces.Persona;
 
-namespace PersonaRegistry.DTOs.PersonaDTOs
+namespace PersonaRegistry.DTOs.Persona
 {
-    public record class PersonaStatsDto : IPersonaStats
+    public record class PersonaStatsDto : IStats
     {
         public int BaseHp { get; set; }
         public int BaseStrength { get; set; }

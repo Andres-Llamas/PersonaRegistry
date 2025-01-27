@@ -1,5 +1,5 @@
 using PersonaRegistry.Elements.Persona;
-using PersonaRegistry.Interfaces.PersonaInterfaces;
+using PersonaRegistry.Interfaces.Persona;
 
 namespace PersonaRegistry.Models
 {
@@ -9,9 +9,9 @@ namespace PersonaRegistry.Models
         public string? Name { get; set; }
         public PersonaArcana Arcana { get; set; }
         public int BaseLevel { get; set; }
-        public IPersonaStats Stats { get; set; }
+        public IStats Stats { get; set; }
         public Dictionary<Affinity, AffinityEffect>? StrongAffinities { get; set; }
-        public ICollection<Affinity>? WeakAffinities { get; set; }
+        public List<Affinity>? WeakAffinities { get; set; }
         public string? BackgroundLore { get; set; }
     }
 }

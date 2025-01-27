@@ -1,14 +1,14 @@
-using PersonaRegistry.DTOs.PersonaDTOs;
+using PersonaRegistry.DTOs.Persona;
 using PersonaRegistry.Models;
 
-namespace PersonaRegistry.Interfaces.PersonaInterfaces
+namespace PersonaRegistry.Interfaces.Persona
 {
     public interface IPersonaService
     {
-        public ICollection<Persona> GetAll();
-        public Persona? GetById(Guid id);
-        public Persona? Create(CreatePersonaDto newPersona);
-        public Persona? Update(Guid id, Persona updatedPersona);
+        public ICollection<Models.Persona> GetAll();
+        public Models.Persona? GetById(Guid id);
+        public Models.Persona? Create(CreatePersonaDto newPersona);
+        public Models.Persona? Update(Guid id, Models.Persona updatedPersona);
         public void Delete(Guid id);
     }
 }

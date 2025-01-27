@@ -1,6 +1,6 @@
 using PersonaRegistry.Models;
-using PersonaRegistry.Interfaces.PersonaInterfaces;
-using PersonaRegistry.DTOs.PersonaDTOs;
+using PersonaRegistry.Interfaces.Persona;
+using PersonaRegistry.DTOs.Persona;
 using PersonaRegistry.Elements.Persona;
 
 namespace PersonaRegistry.Services

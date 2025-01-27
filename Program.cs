@@ -1,4 +1,4 @@
-using PersonaRegistry.Interfaces.PersonaInterfaces;
+using PersonaRegistry.Interfaces.Persona;
 using PersonaRegistry.Services;
 /*
     \%Starting point for the ASP.NET app
